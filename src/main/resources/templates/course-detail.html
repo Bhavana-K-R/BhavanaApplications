@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Course Detail - ' + ${course.title}">Course Detail</title>
+</head>
+<body>
+<h1 th:text="${course.title}">Course Title</h1>
+
+<img th:src="${course.imageUrl}" alt="Course Image" style="max-width:300px; max-height:200px;"/><br/><br/>
+
+<p><strong>ID:</strong> <span th:text="${course.id}"></span></p>
+<p><strong>Instructor:</strong> <span th:text="${course.instructor}"></span></p>
+<p><strong>Duration:</strong> <span th:text="${course.duration}"></span></p>
+<p><strong>Price:</strong> $<span th:text="${course.price}"></span></p>
+<p><strong>Description:</strong></p>
+<p th:text="${course.description}"></p>
+
+<a href="/api/courses/ui/edit/" th:href="@{/api/courses/ui/edit/{id}(id=${course.id})}">Edit</a> |
+<a href="/api/courses/ui">Back to List</a>
+</body>
+</html>

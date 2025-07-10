@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: AppForLinux
+  datasource:
+    #username: admin
+    username: postgres
+    password: BhavK@7120
+    url:      jdbc:postgresql://localhost:5432/courses
+    #url:      jdbc:mysql://localhost:3306
+    #url: jdbc:mysql://database-1.cbswm4uiy7tv.ap-south-1.rds.amazonaws.com:3306/courses
+    driver-class-name: org.postgresql.Driver
+
+jpa:
+  show-sql: true
+  hibernate:
+    ddl-auto: update
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+aws:
+  s3:
+    bucket-name: coursesimagebucket
+    region: us-east-1
